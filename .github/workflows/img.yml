@@ -1,0 +1,2 @@
+- name: imgcmp
+  uses: 9sako6/imgcmp@v2.0.2
