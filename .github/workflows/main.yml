@@ -9,5 +9,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: 9sako6/imgcmp@v2.0.2
-        with:
-          token: ${{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}}
