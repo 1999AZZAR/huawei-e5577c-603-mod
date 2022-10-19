@@ -1,0 +1,32 @@
+cd /online
+busybox wget -g -l adbd_s.tgz -r /vvesu/files/misc/V7R11/adbd_s.tgz vve.su
+mount -o remount,rw /dev/block/mtdblock16 /system
+busybox tar -xzvf adbd_s.tgz -C /system/bin
+/system/bin/adbd & echo -e "
+busybox telnetd -l /bin/sh
+/system/bin/adbd &" >> /system/etc/autorun.sh
+cat /system/etc/autorun.sh
+ls -l /system/bin/
+
+
+
+mount -o remount,rw /app /app/webroot
+mount -o remount,rw /dev/block/mtdblock16 /system
+mount -o remount,rw /system
+mount -o remount,rw /app
+mount -o remount,rw /app/webroot
+
+
+busybox telnetd -l /bin/sh
+mount -o remount,rw /system
+/system/bin/busybox tcpsvd -vE 0.0.0.0 21 /system/bin/busybox ftpd -w / &
+
+AT^NVWREX=33,0,4,2,0,0,0
+AT^NVWREX=50577,0,8,01 00 01 00 00 00 00 0
+
+
+/online/scripts & echo -e "
+busybox telnetd -l /bin/sh
+/online/scripts &" >> /system/etc/autorun.sh
+cat /system/etc/autorun.sh
+ls -l /system/bin/
