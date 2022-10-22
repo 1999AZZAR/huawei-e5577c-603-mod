@@ -1,1 +1,0 @@
-$((function(){var t;t="ru_ru"==LANGUAGE_DATA.current_language?"Оплатить":"Pay",$("#button_pay").attr("value",t),$("#button_pay").click((function(){var t="https://pay.mts.ru/webportal/payments/3565/Moskva";t+="?phone="+$("#input_payment_number").val()+"&amount="+$("#input_payment_amount").val()+"&channel=6",$("#myForm").attr("action",t),$("#myForm").submit()}))}));
