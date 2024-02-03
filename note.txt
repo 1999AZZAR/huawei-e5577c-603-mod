@@ -1,0 +1,16 @@
+Scrip...
+mount -o remount,rw /system
+mount -o remount,rw /app
+mount -o remount,rw /appmount -o remount,rw /app/webroot
+
+busybox telnetd -l /bin/sh
+mount -o remount,rw /system
+/system/bin/busybox tcpsvd -vE 0.0.0.0 21 /system/bin/busybox ftpd -w / &
+
+AT^NVWREX=33,0,4,2,0,0,0
+AT^NVWREX=50577,0,8,01 00 01 00 00 00 00 00
+
+telnet if there was a password 
+
+user: root
+pass: changemerightnow
