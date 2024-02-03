@@ -14,3 +14,5 @@ telnet if there was a password
 
 user: root
 pass: changemerightnow
+
+access : telnet 192.168.8.1 23
