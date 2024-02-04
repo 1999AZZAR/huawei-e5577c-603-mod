@@ -1,6 +1,8 @@
 Scrip...
 mount -o remount,rw /system
 mount -o remount,rw /app
+mount -o remount,rw /
+mount -o remount,rw /data
 mount -o remount,rw /appmount -o remount,rw /app/webroot
 
 busybox telnetd -l /bin/sh
